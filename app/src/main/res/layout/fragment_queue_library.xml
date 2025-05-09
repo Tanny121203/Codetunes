@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".navigationfragments.QueueLibraryFragment">
+
+    <RelativeLayout
+        android:id="@+id/library_component3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <TextView
+            android:id="@+id/my_playlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/queue"
+            android:textColor="@color/musica_color"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+        <View
+            android:id="@+id/library_line_separator"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/my_playlist"
+            android:layout_marginTop="10dp"
+            android:background="@color/navicon_color"/>
+
+        <TextView
+            android:id="@+id/empty_queue_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Queue is empty"
+            android:textSize="18sp"
+            android:textColor="@color/musica_color"
+            android:visibility="gone"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/song_recyclerview"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/library_line_separator"
+            android:layout_marginStart="10dp"
+            tools:listitem="@layout/recycler_songs"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

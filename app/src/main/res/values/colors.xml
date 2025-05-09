@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="line_separator">#80856E8E</color>
+    <color name="textColor">#E1C6EB</color>
+    <color name="nav_background_color">#8E6F99</color>
+    <color name="musica_color">#FFFFFF</color>
+    <color name="navicon_color">#E1C6EB</color>
+    <color name="target_icon_color">#8400B2</color>
+    <color name="search_color">#860BB1</color>
+    <color name="musicplayer_tab">#512561</color>
+
+    <color name="transparent_background">#33FFFFFF</color>
+    <color name="track_artist_text">#860BB1</color>
+    <color name="dark_blue">#00008B</color>
+    <color name="tracks_details_bg1">#99E1C6EB</color>
+    <color name="tracks_details_bg2">#E1C6EB</color>
+    <color name="mini_player_background">#512561</color>
+
+</resources>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/intro_background"
+    tools:context=".navigationfragments.HomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp">
+
+        <TextView
+            android:id="@+id/musica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CODETUNES"
+            android:textColor="@color/musica_color"
+            android:textSize="30sp"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/option_button"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="?attr/selectableItemBackground"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/menu_btn" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/fave_shuffle_cont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:paddingTop="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp">
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/component_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#302c2c2c"
+        android:layout_below="@id/fave_shuffle_cont"
+        android:layout_marginTop="20dp">
+
+        <ImageButton
+            android:id="@+id/shuffle_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="23dp"
+            android:background="?attr/selectableItemBackground"
+            android:padding="5dp"
+            android:src="@drawable/shuffle_off" />
+
+        <TextView
+            android:id="@+id/show_tracks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/tracks"
+            android:textColor="@color/musica_color"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+        <View
+            android:id="@+id/line_separator"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/show_tracks"
+            android:layout_marginTop="10dp"
+            android:background="@color/navicon_color"/>
+
+
+        <!-- NO SONGS DISPLAY (start)-->
+        <TextView
+            android:id="@+id/show_no_songs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_songs_available"
+            android:layout_centerInParent="true"
+            android:textSize="50sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+        <!-- TRACKS DISPLAY (start)-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/song_recyclerview"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/show_tracks"
+            android:layout_marginStart="10dp"
+            tools:listitem="@layout/recycler_songs"/>
+        <!-- TRACKS (end)-->
+
+    </RelativeLayout>
+</RelativeLayout>

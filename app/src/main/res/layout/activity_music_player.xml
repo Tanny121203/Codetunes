@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/song_bg"
+    android:background="#1a1a1a"
+    tools:context=".musicmediaplayer.MusicPlayerActivity">
+
+    <RelativeLayout
+        android:id="@+id/track_details_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="35dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+
+        <ImageButton
+            android:id="@+id/arrow_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/point_leftarrow"
+            android:background="?attr/selectableItemBackground"/>
+
+        <ImageButton
+            android:id="@+id/option_button"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="?attr/selectableItemBackground"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/options_music_player" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/track_details"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:background="#30860BB1">
+
+        <TextView
+            android:textColor="@color/white"
+            android:id="@+id/track_title"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:maxLines="1"/>
+
+
+        <ImageButton
+            android:id="@+id/favorite_track"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/favorite_heart_btn"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+            android:padding="15dp"
+            android:background="?attr/selectableItemBackground"/>
+
+        <TextView
+            android:id="@+id/track_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/track_title"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/artist"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:id="@+id/circle_separator"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="18dp"
+            android:layout_toEndOf="@id/track_artist"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/baseline_circle_24"
+            android:layout_below="@id/track_title"
+            app:tint="@color/track_artist_text"/>
+
+        <TextView
+            android:id="@+id/track_album"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/track_title"
+            android:layout_toEndOf="@id/circle_separator"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/album"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+
+
+        <SeekBar
+            android:id="@+id/duration_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/track_artist"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            />
+
+        <TextView
+            android:id="@+id/start_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/duration_seekbar"
+            android:layout_marginStart="25dp"
+            android:text="00:00"
+            android:padding="15dp"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/end_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/duration_seekbar"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="25dp"
+            android:text="00:00"
+            android:padding="15dp"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/duration_seekbar"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <ImageButton
+                android:id="@+id/shuffle_track"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shuffle_off"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="15dp"
+                android:background="?attr/selectableItemBackground"/>
+
+            <ImageButton
+                android:id="@+id/previous_track"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/previous_track"
+                android:layout_toEndOf="@id/shuffle_track"
+                android:layout_centerVertical="true"
+                android:padding="15dp"
+                android:background="?attr/selectableItemBackground"/>
+
+            <ImageButton
+                android:id="@+id/play_track"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:layout_toEndOf="@id/previous_track"
+                android:layout_centerVertical="true"
+                android:src="@drawable/play_track"
+                android:background="?attr/selectableItemBackground"/>
+
+            <ImageButton
+                android:id="@+id/skip_track"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/play_track"
+                android:padding="15dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/skip_track"
+                android:background="?attr/selectableItemBackground"/>
+
+            <ImageButton
+                android:id="@+id/repeat_track"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/skip_track"
+                android:padding="15dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/repeat_track"
+                android:background="?attr/selectableItemBackground"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

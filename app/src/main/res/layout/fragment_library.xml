@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/intro_background"
+    tools:context=".navigationfragments.LibraryFragment"
+    android:id="@+id/playlist_library_fragment">
+
+    <RelativeLayout
+        android:id="@+id/library_component1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp">
+
+        <TextView
+            android:id="@+id/your_library"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/your_library"
+            android:textColor="@color/musica_color"
+            android:textSize="30sp"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/library_component2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/library_component1"
+        android:paddingTop="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp">
+
+        <ImageButton
+            android:id="@+id/queue_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/queue_button" />
+
+        <ImageButton
+            android:id="@+id/playlist_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="?attr/selectableItemBackground"
+            android:layout_toEndOf="@id/queue_button"
+            android:src="@drawable/playlist_button"/>
+    </RelativeLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_view"
+        android:name="com.example.trymusicplayer.navigationfragments.QueueLibraryFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/library_component2" />
+
+</RelativeLayout>
